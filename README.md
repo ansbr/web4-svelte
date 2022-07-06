@@ -13,11 +13,21 @@ Check out [Web4](https://github.com/vgrichina/web4), which is also powered by Ne
 ## What is Svelte starter for Web4?
 Out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, Bootstrap, and more
 
-## How it working?
+## How it working (YARN)?
+- `yarn install`
+- `yarn dev` for developing
+
+**Then deploy application**
+- `yarn build`
+- `yarn asb`
+- `near login`
+- `near deploy --accountId youglogin.testnet --wasmFile build/release/web4ts.wasm`
+
+## How it working (NPM)?
 - `npm install`
 - `npm run dev` for developing
 
-**Deploy application**
+**Then deploy application**
 - `npm run build`
 - `npm run asb`
 - `near login`

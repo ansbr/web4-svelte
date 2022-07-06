@@ -10,12 +10,11 @@
   <Counter />
 
   <h3>
-    This is starter template for Svelte.js and AssemblyScript.
+    This is starter template for Svelte.js and Web4 using AssemblyScript.
   </h3>
 
   <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
-    the officially supported framework, also powered by Vite!
+    Look to <a href="https://github.com/anbork/web4-svelte">Web4 Svelte starter</a> and check this out!
   </p>
 </main>
 
