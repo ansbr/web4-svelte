@@ -5,14 +5,13 @@
 
 <main>
   <img src={logo} alt="Svelte Logo" />
-  <h1>Hello Typescript!</h1>
+  <h1>Hello Web4!</h1>
 
   <Counter />
 
-  <p>
-    Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
-    apps.
-  </p>
+  <h3>
+    This is starter template for Svelte.js and AssemblyScript.
+  </h3>
 
   <p>
     Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
