@@ -31,7 +31,7 @@ function status(status: u32): Web4Response {
 
 export function web4_get(request: Web4Request): Web4Response {
     if (request.path == "/") {
-        return htmlResponse(html)
+        return htmlResponse(decodeURI(html))
     }
 
     return status(404);
