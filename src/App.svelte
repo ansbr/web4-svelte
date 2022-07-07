@@ -1,13 +1,22 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import logo from './assets/svelte.png'
-  import Counter from './lib/Counter.svelte'
+  import Auth from './lib/Auth.svelte'
+  import near from './utils/near'
+
+  onMount(async() => {
+    $near.connect()
+  })
 </script>
+
 
 <main>
   <img src={logo} alt="Svelte Logo" />
   <h1>Hello Web4!</h1>
 
-  <Counter />
+  {#if $near.wallet }
+    <Auth />
+  {/if}
 
   <h3>
     This is starter template for Svelte.js and Web4 using AssemblyScript.

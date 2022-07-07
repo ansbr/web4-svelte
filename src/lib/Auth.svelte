@@ -1,13 +1,27 @@
 <script lang="ts">
-  let count: number = 0
-  const increment = () => {
-    count += 1
+  import near from '../utils/near'
+
+  const signOut = () => {
+    $near.wallet.signOut();
+    near.update(n => ({...n, user: undefined}))
+  }
+
+  const signIn = () => {
+    $near.wallet.requestSignIn();
   }
 </script>
 
-<button on:click={increment}>
-  Clicks: {count}
-</button>
+{#if $near.user }
+  <p>How are you {$near.user}?</p>
+  <button on:click={signOut}>
+    Sign Out
+  </button>
+{:else}
+  <button on:click={signIn}>
+    Sign In
+  </button>
+{/if}
+
 
 <style>
   button {
@@ -19,7 +33,6 @@
     border-radius: 2em;
     border: 2px solid rgba(255, 62, 0, 0);
     outline: none;
-    width: 200px;
     font-variant-numeric: tabular-nums;
     cursor: pointer;
   }
